@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding">
+  <meta name="description" content="VideoARM introduces an agentic reasoning-over-hierarchical-memory paradigm for long-form video understanding, achieving state-of-the-art performance while reducing token consumption.">
+  <meta name="keywords" content="VideoARM, long-form video understanding, agentic reasoning, hierarchical memory, MLLM, video question answering, CVPR 2026">
+  <meta name="author" content="Yufei Yin, Qianke Meng, Minghao Chen, Jiajun Ding, Zhenwei Shao, Zhou Yu">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MIL Vision and Language Group">
+  <meta property="og:title" content="VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding">
+  <meta property="og:description" content="VideoARM introduces an agentic reasoning-over-hierarchical-memory paradigm for long-form video understanding, achieving state-of-the-art performance while reducing token consumption.">
+  <meta property="og:url" content="https://milvlg.github.io/videoarm">
+  <meta property="og:image" content="https://milvlg.github.io/videoarm/static/images/figure2.png">
+  <meta property="og:image:width" content="2448">
+  <meta property="og:image:height" content="1122">
+  <meta property="og:image:alt" content="VideoARM Architecture Overview">
+  <meta property="article:published_time" content="2026-02-20T00:00:00.000Z">
+  <meta property="article:author" content="Yufei Yin">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Video Understanding">
+  <meta property="article:tag" content="Agentic Reasoning">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding">
+  <meta name="twitter:description" content="VideoARM introduces an agentic reasoning-over-hierarchical-memory paradigm for long-form video understanding, achieving SOTA while reducing token consumption.">
+  <meta name="twitter:image" content="https://milvlg.github.io/videoarm/static/images/figure2.png">
+  <meta name="twitter:image:alt" content="VideoARM Architecture Overview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding">
+  <meta name="citation_author" content="Yin, Yufei">
+  <meta name="citation_author" content="Meng, Qianke">
+  <meta name="citation_author" content="Chen, Minghao">
+  <meta name="citation_author" content="Ding, Jiajun">
+  <meta name="citation_author" content="Shao, Zhenwei">
+  <meta name="citation_author" content="Yu, Zhou">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)">
+  <meta name="citation_arxiv_id" content="2512.12360">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding | CVPR 2026</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS -->
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <noscript>
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding",
+    "description": "VideoARM introduces an agentic reasoning-over-hierarchical-memory paradigm for long-form video understanding, achieving state-of-the-art performance while significantly reducing token consumption.",
+    "author": [
+      {"@type": "Person", "name": "Yufei Yin", "affiliation": {"@type": "Organization", "name": "Hangzhou Dianzi University"}},
+      {"@type": "Person", "name": "Qianke Meng", "affiliation": {"@type": "Organization", "name": "Hangzhou Dianzi University"}},
+      {"@type": "Person", "name": "Minghao Chen", "affiliation": {"@type": "Organization", "name": "Hangzhou Dianzi University"}},
+      {"@type": "Person", "name": "Jiajun Ding", "affiliation": {"@type": "Organization", "name": "Hangzhou Dianzi University"}},
+      {"@type": "Person", "name": "Zhenwei Shao", "affiliation": {"@type": "Organization", "name": "Hangzhou Dianzi University"}},
+      {"@type": "Person", "name": "Zhou Yu", "affiliation": {"@type": "Organization", "name": "Hangzhou Dianzi University"}}
+    ],
+    "datePublished": "2026-02-20",
+    "publisher": {"@type": "Organization", "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"},
+    "url": "https://milvlg.github.io/videoarm",
+    "image": "https://milvlg.github.io/videoarm/static/images/figure2.png",
+    "keywords": ["long-form video understanding", "agentic reasoning", "hierarchical memory", "multimodal large language models", "video question answering"],
+    "abstract": "Long-form video understanding remains challenging due to the extended temporal structure and dense multimodal cues. Despite recent progress, many existing approaches still rely on hand-crafted reasoning pipelines or employ token-consuming video preprocessing to guide MLLMs in autonomous reasoning. To overcome these limitations, we introduce VideoARM, an Agentic Reasoning-over-hierarchical-Memory paradigm for long-form video understanding.",
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from MIL VLG">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from MIL VLG</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <a href="https://github.com/MILVLG/prophet" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Prophet</h5>
+            <p>Prompting Large Language Models with Answer Heuristics for Knowledge-based Visual Question Answering.</p>
+            <span class="work-venue">CVPR 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://github.com/MILVLG/imp" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>IMP</h5>
+            <p>A family of highly capable yet efficient large multimodal models.</p>
+            <span class="work-venue">2024</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://github.com/MILVLG/openvqa" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>OpenVQA</h5>
+            <p>A lightweight, scalable, and general framework for visual question answering research.</p>
+            <span class="work-venue">2019</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="#" target="_blank">Yufei Yin</a>,</span>
+              <span class="author-block">
+                <a href="https://qiankemeng.github.io" target="_blank">Qianke Meng</a>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Minghao Chen</a>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Jiajun Ding</a>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Zhenwei Shao</a>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Zhou Yu</a></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">School of Computer Science, Hangzhou Dianzi University, China</span>
+            </div>
+            <div class="publication-venue">CVPR 2026</div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper PDF -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2512.12360.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2512.12360" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/MILVLG/videoarm" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+              <!-- MCP Skill -->
+              <span class="link-block">
+                <a href="#" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-robot"></i>
+                </span>
+                <span>MCP Skill</span>
+              </a>
+            </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Long-form video understanding remains challenging due to the extended temporal structure and dense multimodal cues. Despite recent progress, many existing approaches still rely on hand-crafted reasoning pipelines or employ token-consuming video preprocessing to guide MLLMs in autonomous reasoning. To overcome these limitations, we introduce <strong>VideoARM</strong>, an <strong>A</strong>gentic <strong>R</strong>easoning-over-hierarchical-<strong>M</strong>emory paradigm for long-form video understanding. Instead of static, exhaustive preprocessing, VideoARM performs adaptive, on-the-fly agentic reasoning and memory construction. Specifically, VideoARM performs an adaptive and continuous loop of <em>observing</em>, <em>thinking</em>, <em>acting</em>, and <em>memorizing</em>, where a controller autonomously invokes tools to interpret the video in a coarse-to-fine manner, thereby substantially reducing token consumption. In parallel, a hierarchical multimodal memory continuously captures and updates multi-level clues throughout the operation of the agent, providing precise contextual information to support the controller in decision-making. Experiments on prevalent benchmarks demonstrate that VideoARM outperforms the state-of-the-art method, DVD, while significantly reducing token consumption for long-form videos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Figure 1: Comparison -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content">
+          <img src="static/images/figure1.png" alt="Comparison of different paradigms for long-form video understanding" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" loading="lazy"/>
+          <p class="has-text-centered" style="margin-top: 1rem; color: #64748b; font-size: 0.95rem;">
+            <strong>Figure 1.</strong> Comparison of different paradigms for long-form video understanding. (a) VideoTree pre-selects keyframes in a single pass; (b) DVD performs exhaustive, multi-pass preprocessing; (c) <strong>VideoARM (Ours)</strong> performs adaptive, on-the-fly agentic reasoning with hierarchical memory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Figure 2: Architecture -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Method</h2>
+        <div class="content">
+          <img src="static/images/figure2.png" alt="Overview of the VideoARM architecture" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);" loading="lazy"/>
+          <p class="has-text-centered" style="margin-top: 1rem; color: #64748b; font-size: 0.95rem;">
+            <strong>Figure 2.</strong> Overview of VideoARM. (a) The Agentic Reasoning-over-Hierarchical-Memory paradigm, featuring Scene Memory, Fact Memory, and Result Memory; (b) The reasoning pipeline where a controller iteratively observes, thinks, acts, and memorizes to answer questions about long-form videos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
+    </div>
+    <pre id="bibtex-code"><code>@inproceedings{yin2026videoarm,
+  title={VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding},
+  author={Yin, Yufei and Meng, Qianke and Chen, Minghao and Ding, Jiajun and Shao, Zhenwei and Yu, Zhou},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content" style="text-align: center;">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
