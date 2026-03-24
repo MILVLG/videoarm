@@ -3,7 +3,7 @@
 
   **[School of Computer Science, Hangzhou Dianzi University, China](https://www.hdu.edu.cn)**
 
-  [Yufei Yin](https://yinyf0804.github.io), [Qianke Meng](https://qiankemeng.github.io), [Minghao Chen](https://faculty.hdu.edu.cn/jsjxy/cmh2/main.htm), [Jiajun Ding](https://mil.hdu.edu.cn/people/jiajun_ding/index.html), [Zhenwei Shao](https://scholar.google.com/citations?user=j87m-woAAAAJ&hl=en), [Zhou Yu](https://faculty.hdu.edu.cn/jsjxy/yz/main.htm)
+  [Yufei Yin](https://yinyf0804.github.io), [Qianke Meng](https://qiankemeng.github.io), [Minghao Chen](https://faculty.hdu.edu.cn/jsjxy/cmh2/main.htm), [Jiajun Ding](https://mil.hdu.edu.cn/people/jiajun_ding/index.html), [Zhenwei Shao](https://scholar.google.com/citations?user=j87m-woAAAAJ&hl=en), [Zhou Yu](https://faculty.hdu.edu.cn/jsjxy/yz/main.htm)<sup>*</sup>
 </div>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2512.12360-b31b1b.svg)](https://arxiv.org/abs/2512.12360)
