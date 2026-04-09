@@ -690,7 +690,10 @@ class VideoARMAgent:
                 pass
 
     # ------------------------------------------------------------------ #
-    # Tools registry                                                       #
+    # Tools registry
+    # (For ease of implementation, we integrate the 
+    # Interval Localizer and Clip Explorer described 
+    # in the paper into a parameterized implementation.)                                                    
     # ------------------------------------------------------------------ #
 
     def _build_tools_registry(self) -> List[Dict]:
