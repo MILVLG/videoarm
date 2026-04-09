@@ -9,8 +9,8 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2512.12360-b31b1b.svg)](https://arxiv.org/abs/2512.12360)
 [![GitHub](https://img.shields.io/github/stars/MILVLG/videoarm?style=social)](https://github.com/MILVLG/videoarm)
 
-This repository contains the **official implementation** of the 2026 CVPR paper [VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding](https://arxiv.org/abs/2512.12360), which progressively localizes, interprets, and abstracts evidence in an adaptive observe–think–act–memorize loop. 
-Extensive experiments demonstrate that VideoARM maintains strong performance while significantly reducing token consumption.
+This repository contains the **official implementation** of the 2026 CVPR paper [VideoARM](https://arxiv.org/abs/2512.12360), which progressively localizes, interprets, and abstracts evidence in an adaptive observe–think–act–memorize loop. 
+Extensive experiments demonstrate that VideoARM maintains strong performance while significantly reducing token consumption. Our **official skill implementation** is also available on both [GitHub](https://github.com/qiankemeng/VideoARM-skill) and [ClawHub](https://clawhub.ai/qiankemeng/video-reader).
 
 
 ![Figure 2: Overview](docs/static/images/figure2.png)
