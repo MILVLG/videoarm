@@ -9,6 +9,15 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2512.12360-b31b1b.svg)](https://arxiv.org/abs/2512.12360)
 [![GitHub](https://img.shields.io/github/stars/MILVLG/videoarm?style=social)](https://github.com/MILVLG/videoarm)
 
+
+```bibtex
+@inproceedings{yin2026videoarm,
+  title={VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding},
+  author={Yin, Yufei and Meng, Qianke and Chen, Minghao and Ding, Jiajun and Shao, Zhenwei and Yu, Zhou},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}
+```
 ## Installation
 
 ```bash
@@ -87,11 +96,4 @@ VIDEOARM_BASE_URL_CLIP_ANALYZER=https://...
 See `.env.example` for the full list of options.
 
 
-```bibtex
-@inproceedings{yin2026videoarm,
-  title={VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding},
-  author={Yin, Yufei and Meng, Qianke and Chen, Minghao and Ding, Jiajun and Shao, Zhenwei and Yu, Zhou},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2026}
-}
-```
+
