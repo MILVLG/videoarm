@@ -105,6 +105,9 @@ VIDEOARM_BASE_URL_CLIP_ANALYZER=https://...
 
 See `.env.example` for the full list of options.
 
+## Citation
+
+If you find our work useful, please consider citing:
 
 ```bibtex
 @inproceedings{yin2026videoarm,
