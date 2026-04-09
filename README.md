@@ -16,13 +16,13 @@ Extensive experiments demonstrate that VideoARM maintains strong performance whi
 ![Figure 2: Overview](docs/static/images/figure2.png)
 ## News
 
--[2026.04.09] Our **official implementation** is available.
+- **[2026.04.09]** Our **official implementation** is available.
 
--[2026.03.25] Our **official skill implementation** is available on both [GitHub](https://github.com/qiankemeng/VideoARM-skill) and [ClawHub](https://clawhub.ai/qiankemeng/video-reader).
+- **[2026.03.25]** Our **official skill implementation** is available on both [GitHub](https://github.com/qiankemeng/VideoARM-skill) and [ClawHub](https://clawhub.ai/qiankemeng/video-reader).
 
--[2026.02.21] Our paper is accepted at CVPR 2026 🎉
+- **[2026.02.21]** Our paper is accepted at **CVPR 2026** 🎉
 
--[2025.12.13] Our paper is realsed at [arxiv](https://arxiv.org/abs/2512.12360).
+- **[2025.12.13]** Our paper is realsed at [arxiv](https://arxiv.org/abs/2512.12360).
 
 
 
