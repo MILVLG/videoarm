@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videoarm"
+version = "0.1.0"
+description = "Agentic Reasoning-over-Hierarchical-Memory for Long-Form Video Understanding"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+    "opencv-python>=4.8.0",
+    "openai>=1.0.0",
+    "requests>=2.28.0",
+    "python-dotenv>=1.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+videoarm = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["videoarm*"]
+
+[tool.black]
+line-length = 88
+
+[tool.flake8]
+max-line-length = 120
+ignore = ["E501", "E203", "W503"]
