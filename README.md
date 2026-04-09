@@ -9,20 +9,22 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2512.12360-b31b1b.svg)](https://arxiv.org/abs/2512.12360)
 [![GitHub](https://img.shields.io/github/stars/MILVLG/videoarm?style=social)](https://github.com/MILVLG/videoarm)
 
+This repository contains the **official implementation** of the 2026 CVPR paper [VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding](https://arxiv.org/abs/2512.12360), which progressively localizes, interprets, and abstracts evidence in an adaptive observe–think–act–memorize loop. 
+Extensive experiments demonstrate that VideoARM maintains strong performance while significantly reducing token consumption.
 
-```bibtex
-@inproceedings{yin2026videoarm,
-  title={VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding},
-  author={Yin, Yufei and Meng, Qianke and Chen, Minghao and Ding, Jiajun and Shao, Zhenwei and Yu, Zhou},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-  year={2026}
-}
-```
+
 
 ## News
 
+-[2026.04.09] Our **official implementation** is available.
+
+-[2026.03.25] Our **official skill implementation** is available on both [GitHub](https://github.com/qiankemeng/VideoARM-skill) and [ClawHub](https://clawhub.ai/qiankemeng/video-reader).
+
+-[2026.02.21] Our paper is accepted at CVPR 2026 🎉
+
 -[2025.12.13] Our paper is realsed at [arxiv](https://arxiv.org/abs/2512.12360).
--[2026.2.21] Our paper is accepted at CVPR 2026.
+
+
 
 
 
@@ -104,4 +106,11 @@ VIDEOARM_BASE_URL_CLIP_ANALYZER=https://...
 See `.env.example` for the full list of options.
 
 
-
+```bibtex
+@inproceedings{yin2026videoarm,
+  title={VideoARM: Agentic Reasoning over Hierarchical Memory for Long-Form Video Understanding},
+  author={Yin, Yufei and Meng, Qianke and Chen, Minghao and Ding, Jiajun and Shao, Zhenwei and Yu, Zhou},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026}
+}
+```
