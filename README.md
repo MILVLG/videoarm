@@ -13,7 +13,7 @@ This repository contains the **official implementation** of the 2026 CVPR paper 
 Extensive experiments demonstrate that VideoARM maintains strong performance while significantly reducing token consumption.
 
 
-
+![Figure 2: Overview](docs/static/images/figure2.png)
 ## News
 
 -[2026.04.09] Our **official implementation** is available.
