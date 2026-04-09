@@ -18,6 +18,14 @@
   year={2026}
 }
 ```
+
+## News
+
+-[2025.12.13] Our paper is realsed at [arxiv](https://arxiv.org/abs/2512.12360).
+-[2026.2.21] Our paper is accepted at CVPR 2026.
+
+
+
 ## Installation
 
 ```bash
