@@ -22,7 +22,7 @@ Extensive experiments demonstrate that VideoARM maintains strong performance whi
 
 - **[2026.02.21]** Our paper is accepted at **CVPR 2026** 🎉
 
-- **[2025.12.13]** Our paper is realsed at [arxiv](https://arxiv.org/abs/2512.12360).
+- **[2025.12.13]** Our paper is released at [arxiv](https://arxiv.org/abs/2512.12360).
 
 
 
